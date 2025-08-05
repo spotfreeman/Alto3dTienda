@@ -1,12 +1,13 @@
-# React + Vite
+🌐 Landing Page - Proyecto Base
+Esta es una landing page simple desarrollada con Node.js, Vite y Tailwind CSS. Actualmente es una base funcional y liviana, pensada para escalar fácilmente o ser adaptada a distintos proyectos.
+Diseñada con un enfoque responsivo y minimalista.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Tecnologías utilizadas
+Node.js
 
-Currently, two official plugins are available:
+Vite (para desarrollo rápido y bundling)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tailwind CSS (utilidades para estilos modernos y personalizados)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📦 En desarrollo
+Esta landing está en etapa inicial. Próximamente se integrarán más secciones, componentes interactivos y mejoras de diseño.
