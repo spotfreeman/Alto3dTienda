@@ -727,7 +727,7 @@ export default function Example() {
           </div>
 
           <div className="border-t border-gray-100 py-10 text-center">
-            <p className="text-sm text-gray-500">&copy; 2021 Your Company, Inc. All rights reserved.</p>
+            <p className="text-sm text-gray-500">&copy; 2025 Your Company, Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>
