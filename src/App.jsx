@@ -25,32 +25,40 @@ import {
 
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
+import imgGeneral from './assets/images/general.jpg'
+import imgCorazon from './assets/images/imgCorazon.jpg'
+import imgFox from './assets/images/imgFox.jpg'
+import imgGatos from './assets/images/imgGatos.jpg'
+import imgGatosPareja from './assets/images/imgGatosPareja.jpg'
+import imgMano from './assets/images/imgMano.jpg'
+import imgAstro from './assets/images/imgAstro.jpg'
+
 const currencies = ['CLP', 'USD']
 const navigation = {
   categories: [
     {
-      name: 'Women',
+      name: 'Catalogo',
       featured: [
         {
-          name: 'New Arrivals',
+          name: 'Oficina',
           href: '#',
           imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg',
           imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
         },
         {
-          name: 'Basic Tees',
+          name: 'Hogar',
           href: '#',
           imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-02.jpg',
           imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
         },
         {
-          name: 'Accessories',
+          name: 'Minis',
           href: '#',
           imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-03.jpg',
           imageAlt: 'Model wearing minimalist watch with black wristband and white watch face.',
         },
         {
-          name: 'Carry',
+          name: 'Otros',
           href: '#',
           imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-04.jpg',
           imageAlt: 'Model opening tan leather long wallet with credit card pockets and cash pouch.',
@@ -95,59 +103,59 @@ const navigation = {
 }
 const collections = [
   {
-    name: "Women's",
+    name: "Adornos de mesa",
     href: '#',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-collection-01.jpg',
-    imageAlt: 'Woman wearing a comfortable cotton t-shirt.',
+    imageSrc: imgCorazon,
+    imageAlt: 'Adornos de mesa con forma de corazón, ideales para decorar tu hogar.',
   },
   {
-    name: "Men's",
+    name: "Figuras",
     href: '#',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-collection-02.jpg',
+    imageSrc: imgFox,
     imageAlt: 'Man wearing a comfortable and casual cotton t-shirt.',
   },
   {
-    name: 'Desk Accessories',
+    name: 'Impresiones en Serie',
     href: '#',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-collection-03.jpg',
+    imageSrc: imgAstro,
     imageAlt: 'Person sitting at a wooden desk with paper note organizer, pencil and tablet.',
   },
 ]
 const trendingProducts = [
   {
     id: 1,
-    name: 'Leather Long Wallet',
-    color: 'Natural',
-    price: '$75',
+    name: 'Gata',
+    color: 'Negro , Blanco , Marfil',
+    price: '$15.000',
     href: '#',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-trending-product-02.jpg',
+    imageSrc: imgGatos,
     imageAlt: 'Hand stitched, orange leather long wallet.',
   },
   {
     id: 2,
-    name: 'Machined Pencil and Pen Set',
-    color: 'Black',
-    price: '$70',
+    name: 'Pareja de Gatos + Led',
+    color: 'Black + Luces',
+    price: '$20.000',
     href: '#',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-trending-product-03.jpg',
+    imageSrc: imgGatosPareja,
     imageAlt: '12-sided, machined black pencil and pen.',
   },
   {
     id: 3,
-    name: 'Mini-Sketchbooks',
-    color: 'Light Brown',
-    price: '$27',
+    name: 'Soporte Vino Mano',
+    color: 'Negro , Blanco , Marfil , Otros ...',
+    price: '$15.000',
     href: '#',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-trending-product-04.jpg',
+    imageSrc: imgMano,
     imageAlt: 'Set of three light and dark brown mini sketch books.',
   },
   {
     id: 3,
-    name: 'Organizer Set',
-    color: 'Walnut',
-    price: '$149',
+    name: 'Set Astronautas (20)',
+    color: 'Blaco + Negro , otros...',
+    price: '$10.000',
     href: '#',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-trending-product-01.jpg',
+    imageSrc: imgAstro,
     imageAlt: 'Beautiful walnut organizer set with multiple white compartments',
   },
 ]
@@ -503,7 +511,7 @@ export default function Example() {
               <div className="absolute inset-0 overflow-hidden">
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-hero-full-width.jpg"
+                  src={imgGeneral}
                   className="size-full object-cover"
                 />
               </div>
@@ -519,7 +527,7 @@ export default function Example() {
                 <div className="absolute inset-0 overflow-hidden">
                   <img
                     alt=""
-                    src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-hero-full-width.jpg"
+                    src={imgGeneral}
                     className="size-full object-cover"
                   />
                 </div>
@@ -527,8 +535,11 @@ export default function Example() {
               </div>
               <div className="h-48 w-full bg-white" />
             </div>
+
+
             <div className="relative py-32">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">ALTO 3D</h1>
+              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">Alto 3D</h1>
+              {/* Description 
               <div className="mt-4 sm:mt-6">
                 <a
                   href="#"
@@ -537,7 +548,9 @@ export default function Example() {
                   Shop Collection
                 </a>
               </div>
+              */}
             </div>
+
           </div>
 
           <section aria-labelledby="collection-heading" className="relative -mt-96 sm:mt-0">
