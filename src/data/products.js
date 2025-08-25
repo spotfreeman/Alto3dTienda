@@ -1,30 +1,22 @@
-import { imgCorazon, imgFox, imgAstro, imgGatos, imgGatosPareja, imgMano } from '../assets/images/images'
+// La importacion de las imagenes se hace desde el archivo images.js
 
-export const collections = [
-    {
-        name: "Adornos de mesa",
-        href: '/coleccion/adornos',
-        imageSrc: imgCorazon,
-        imageAlt: 'Adornos de mesa con forma de corazón, ideales para decorar tu hogar.',
-    },
-    {
-        name: "Figuras",
-        href: '/coleccion/figuras',
-        imageSrc: imgFox,
-        imageAlt: 'Man wearing a comfortable and casual cotton t-shirt.',
-    },
-    {
-        name: 'Impresiones en Serie',
-        href: '/coleccion/impresiones',
-        imageSrc: imgAstro,
-        imageAlt: 'Person sitting at a wooden desk with paper note organizer, pencil and tablet.',
-    },
-]
+import {
+    imgAstro,
+    imgGatos,
+    imgGatosPareja,
+    imgMano,
+    imgCorazon,
+    imgFox,
+    imgMamaHija,
+    imgMamaHija2,
+    imgPosaVasoPacman
+} from '../assets/images/images'
 
-export const trendingProducts = [
+export const productos = [
     {
         id: 1,
         name: 'Gata',
+        categoria: 'Figuras Decorativas',
         color: 'Negro , Blanco , Marfil',
         price: '$15.000',
         size: '10 cm x 10 cm x 10 cm ',
@@ -35,6 +27,7 @@ export const trendingProducts = [
     {
         id: 2,
         name: 'Pareja de Gatos + Led',
+        categoria: 'Figuras Decorativas',
         color: 'Black + Luces',
         price: '$20.000',
         size: '10 cm x 10 cm x 10 cm ',
@@ -45,6 +38,7 @@ export const trendingProducts = [
     {
         id: 3,
         name: 'Soporte Vino Mano',
+        categoria: 'Deco',
         color: 'Negro , Blanco , Marfil , Otros ...',
         price: '$15.000',
         size: '10 cm x 10 cm x 10 cm ',
@@ -55,6 +49,7 @@ export const trendingProducts = [
     {
         id: 4,
         name: 'Set Astronautas (20)',
+        categoria: 'Figuras',
         color: 'Blaco + Negro , otros...',
         price: '$10.000',
         size: '10 cm x 10 cm x 10 cm ',
@@ -62,4 +57,60 @@ export const trendingProducts = [
         imageSrc: imgAstro,
         imageAlt: 'Beautiful walnut organizer set with multiple white compartments',
     },
+    {
+        id: 5,
+        name: 'Set Astronautas (20)',
+        categoria: 'Figuras',
+        color: 'Blaco + Negro , otros...',
+        price: '$10.000',
+        size: '10 cm x 10 cm x 10 cm ',
+        href: '#',
+        imageSrc: imgCorazon,
+        imageAlt: 'Beautiful walnut organizer set with multiple white compartments',
+    },
+    {
+        id: 6,
+        name: 'Set Astronautas (20)',
+        categoria: 'Figuras',
+        color: 'Blaco + Negro , otros...',
+        price: '$10.000',
+        size: '10 cm x 10 cm x 10 cm ',
+        href: '#',
+        imageSrc: imgFox,
+        imageAlt: 'Beautiful walnut organizer set with multiple white compartments',
+    },
+    {
+        id: 7,
+        name: 'Set Astronautas (20)',
+        categoria: 'Figuras',
+        color: 'Blaco + Negro , otros...',
+        price: '$10.000',
+        size: '10 cm x 10 cm x 10 cm ',
+        href: '#',
+        imageSrc: imgMamaHija,
+        imageAlt: 'Beautiful walnut organizer set with multiple white compartments',
+    },
+    {
+        id: 8,
+        name: 'Set Astronautas (20)',
+        categoria: 'Figuras',
+        color: 'Blaco + Negro , otros...',
+        price: '$10.000',
+        size: '10 cm x 10 cm x 10 cm ',
+        href: '#',
+        imageSrc: imgMamaHija2,
+        imageAlt: 'Beautiful walnut organizer set with multiple white compartments',
+    },
+    {
+        id: 9,
+        name: 'Set Astronautas (20)',
+        categoria: 'Figuras',
+        color: 'Blaco + Negro , otros...',
+        price: '$10.000',
+        size: '10 cm x 10 cm x 10 cm ',
+        href: '#',
+        imageSrc: imgPosaVasoPacman,
+        imageAlt: 'Beautiful walnut organizer set with multiple white compartments',
+    },
+
 ]
