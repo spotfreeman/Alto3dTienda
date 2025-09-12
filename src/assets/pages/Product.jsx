@@ -1,4 +1,3 @@
-import imgCubos from '../images/Hiperfoco/imgCubos.jpg'
 import imgPulpos from '../images/Tacto/imgPulpos.jpg'
 import imgBoton from '../images/EstresAnsiedad/imgBotonCorazon.jpg'
 
