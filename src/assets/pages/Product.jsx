@@ -23,6 +23,8 @@ export default function Products() {
                             <img
                                 alt="Drawstring top with elastic loop closure and textured interior padding."
                                 src={imgBoton}
+                                loading="lazy"
+                                decoding="async"
                                 className="aspect-[3/2] w-full rounded-lg object-cover"
                             />
                             <p className="mt-8 text-base text-gray-500">
@@ -34,6 +36,8 @@ export default function Products() {
                             <img
                                 alt="Front zipper pouch with included key ring."
                                 src={imgPulpos}
+                                loading="lazy"
+                                decoding="async"
                                 className="aspect-[3/2] w-full rounded-lg object-cover"
                             />
                             <p className="mt-8 text-base text-gray-500">

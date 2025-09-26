@@ -193,6 +193,8 @@ export default function Storefront() {
                                                     <img
                                                         alt={item.imageAlt}
                                                         src={item.imageSrc}
+                                                        loading="lazy"
+                                                        decoding="async"
                                                         className="aspect-square w-full rounded-md bg-gray-100 object-cover group-hover:opacity-75"
                                                     />
                                                     <a href={item.href} className="mt-6 block text-sm font-medium text-gray-900">
@@ -233,6 +235,9 @@ export default function Storefront() {
                     <img
                         alt=""
                         src={imageGeneral}
+                        loading="eager"
+                        decoding="async"
+                        fetchpriority="high"
                         className="size-full object-cover"
                     />
                 </div>
@@ -287,6 +292,8 @@ export default function Storefront() {
                                                                                     <img
                                                                                         alt={item.imageAlt}
                                                                                         src={item.imageSrc}
+                                                                                        loading="lazy"
+                                                                                        decoding="async"
                                                                                         className="aspect-square w-full rounded-md bg-gray-100 object-cover group-hover:opacity-75"
                                                                                     />
                                                                                     <a href={item.href} className="mt-4 block font-medium text-gray-900">
@@ -412,7 +419,7 @@ export default function Storefront() {
                                             className="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
                                         >
                                             <span aria-hidden="true" className="absolute inset-0">
-                                                <img alt="" src={category.imageSrc} className="size-full object-cover" />
+                                                <img alt="" src={category.imageSrc} loading="lazy" decoding="async" className="size-full object-cover" />
                                             </span>
                                             <span
                                                 aria-hidden="true"
@@ -446,6 +453,7 @@ export default function Storefront() {
                                 loop
                                 muted
                                 playsInline
+                                preload="metadata"
                                 className="w-full h-full object-cover rounded"
                             >
                                 <source src={videoBambu} type="video/mp4" />
@@ -482,6 +490,8 @@ export default function Storefront() {
                                 <img
                                     alt={collection.imageAlt}
                                     src={collection.imageSrc}
+                                    loading="lazy"
+                                    decoding="async"
                                     className="aspect-[3/2] w-full rounded-lg object-cover group-hover:opacity-75 lg:aspect-[5/6]"
                                 />
                                 <h3 className="mt-4 text-base font-semibold text-gray-900">{collection.name}</h3>
@@ -498,17 +508,19 @@ export default function Storefront() {
                     <h1 className="text-2xl font-bold mb-4">Productos</h1>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                         {productos.map(producto => (
-                            <div key={producto.id} className="bg-white rounded-lg shadow p-4">
+                            <a key={producto.id} href={`/producto/${producto.id}`} className="bg-white rounded-lg shadow p-4 block">
                                 <img
                                     src={producto.imageSrc}
                                     alt={producto.imageAlt}
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-48 object-cover rounded"
                                 />
                                 <h2 className="mt-2 text-lg font-semibold">{producto.name}</h2>
                                 <p className="text-gray-500">{producto.color}</p>
                                 <p className="text-gray-700 font-bold">{producto.price}</p>
                                 <p className="text-sm text-gray-400">{producto.size}</p>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </div>
@@ -522,6 +534,8 @@ export default function Storefront() {
                             <img
                                 alt=""
                                 src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-01-feature-section-02.jpg"
+                                loading="lazy"
+                                decoding="async"
                                 className="size-full object-cover"
                             />
                         </div>

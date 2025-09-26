@@ -1,11 +1,10 @@
 import { useParams } from "react-router-dom";
+import { productos } from "../../data/products";
 
-
-
-
-export default function ProductDetail({ products }) {
+export default function ProductDetail() {
     const { id } = useParams();
-    const product = products.find((p) => p.id === Number(id));
+    const numericId = Number(id);
+    const product = productos.find((p) => p.id === numericId);
 
     if (!product) return <div className="p-8 text-center">Producto no encontrado</div>;
 
@@ -17,6 +16,8 @@ export default function ProductDetail({ products }) {
                     <img
                         src={product.imageSrc}
                         alt={product.imageAlt}
+                        loading="lazy"
+                        decoding="async"
                         className="rounded-lg shadow-lg w-80 h-auto object-cover"
                     />
                 </div>
