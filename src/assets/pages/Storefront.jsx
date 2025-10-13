@@ -1,5 +1,3 @@
-'use client'
-
 import { Fragment, useState } from 'react'
 import {
     Dialog,
@@ -33,6 +31,8 @@ import videoBambu from '../images/anim/video.mp4'
 import imgBoton from '../images/EstresAnsiedad/imgBotonCorazon.jpg'
 import imgCubos from '../images/Hiperfoco/imgCubos.jpg'
 import imgPulpos from '../images/Tacto/imgPulpos.jpg'
+import imgGatos from '../images/imgGatos.jpg'
+import imgPosaVasoPacman from '../images/imgPosaVasoPacman.jpg'
 
 const navigation = {
     categories: [
@@ -85,56 +85,56 @@ const navigation = {
         },
     ],
     pages: [
-        { name: 'Ver Todo', href: '#' },
-        { name: 'Company', href: '#' },
-        { name: 'Stores', href: '#' },
+        { name: 'Ver Todo', href: '#products-heading' },
+        { name: 'Equipo', href: '/equipo' },
+        { name: 'Contacto', href: '/contacto' },
     ],
 }
 const categories = [
     {
-        name: 'New Arrivals',
-        href: '#',
-        imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-01-category-01.jpg',
+        name: 'Figuras Decorativas',
+        href: '/categoria/figuras-decorativas',
+        imageSrc: imgGatos,
     },
     {
-        name: 'Productivity',
-        href: '#',
-        imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-01-category-02.jpg',
+        name: 'Productos Sensoriales',
+        href: '/categoria/productos-sensoriales',
+        imageSrc: imgBoton,
     },
     {
-        name: 'Workspace',
-        href: '#',
-        imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-01-category-04.jpg',
+        name: 'Accesorios',
+        href: '/categoria/accesorios',
+        imageSrc: imgPosaVasoPacman,
     },
     {
-        name: 'Accessories',
-        href: '#',
-        imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-01-category-05.jpg',
+        name: 'Focus y Concentración',
+        href: '/categoria/focus-concentracion',
+        imageSrc: imgCubos,
     },
     {
-        name: 'Sale',
-        href: '#',
-        imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-01-category-03.jpg',
+        name: 'Tacto y Texturas',
+        href: '/categoria/tacto-texturas',
+        imageSrc: imgPulpos,
     },
 ]
 const collections = [
     {
         name: 'Sensorial',
-        href: '#',
+        href: '/categoria/productos-sensoriales',
         imageSrc: imgBoton,
         imageAlt: 'Imagen Boton Corazones',
         description: 'Encuentra artículos diseñados para ayudarte a liberar tensiones y relajar tu mente. Nuestros productos sensoriales impresos en 3D son ideales para momentos de estrés, ya que ofrecen una experiencia táctil que calma, distrae y aporta una sensación de bienestar en cualquier lugar.',
     },
     {
         name: 'Tacto',
-        href: '#',
+        href: '/categoria/tacto-texturas',
         imageSrc: imgPulpos,
         imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
         description: 'Explora la variedad de texturas, formas y movimientos que invitan a descubrir nuevas sensaciones. Estos artículos son perfectos para quienes disfrutan experimentar con el tacto, mantener las manos ocupadas o simplemente añadir un momento de juego y exploración en su rutina.',
     },
     {
         name: 'Focus',
-        href: '#',
+        href: '/categoria/focus-concentracion',
         imageSrc: imgCubos,
         imageAlt: 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
         description: 'Mantén tu mente enfocada y activa con objetos pensados para estimular la atención y la productividad. Desde mecanismos repetitivos hasta figuras giratorias, cada diseño está creado para acompañarte en tareas largas, estudios o jornadas de trabajo que requieren concentración.',
@@ -374,16 +374,17 @@ export default function Storefront() {
                 </header>
 
                 <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-32 text-center sm:py-64 lg:px-0">
-                    <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">New arrivals are here</h1>
+                    <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">Alto3D Tienda</h1>
                     <p className="mt-4 text-xl text-white">
-                        The new arrivals have, well, newly arrived. Check out the latest options from our summer small-batch release
-                        while they're still in stock.
+                        Descubre productos únicos impresos en 3D con la más alta calidad.
+                        Desde figuras decorativas hasta accesorios funcionales, cada pieza está diseñada
+                        para sorprender y durar.
                     </p>
                     <a
-                        href="#"
-                        className="mt-8 inline-block rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100"
+                        href="#products-heading"
+                        className="mt-8 inline-block rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 transition-colors"
                     >
-                        Shop New Arrivals
+                        Ver Productos
                     </a>
                 </div>
             </div>
@@ -395,8 +396,8 @@ export default function Storefront() {
                         <h2 id="category-heading" className="text-2xl font-bold tracking-tight text-gray-900">
                             Categorias
                         </h2>
-                        <a href="#" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
-                            Ver todas las categorias
+                        <a href="/categoria/todos" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
+                            Ver todas las categorías
                             <span aria-hidden="true"> &rarr;</span>
                         </a>
                     </div>
@@ -427,8 +428,8 @@ export default function Storefront() {
                     </div>
 
                     <div className="mt-6 px-4 sm:hidden">
-                        <a href="#" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
-                            Browse all categories
+                        <a href="/categoria/todos" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+                            Ver todas las categorías
                             <span aria-hidden="true"> &rarr;</span>
                         </a>
                     </div>
@@ -493,25 +494,44 @@ export default function Storefront() {
 
 
 
-                {/* test de importacion imagenes */}
-                <div>
-                    <h1 className="text-2xl font-bold mb-4">Productos</h1>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {/* Sección de Productos */}
+                <section aria-labelledby="products-heading" className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+                    <div className="text-center">
+                        <h2 id="products-heading" className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            Nuestros Productos 3D
+                        </h2>
+                        <p className="mt-4 text-lg text-gray-600">
+                            Descubre nuestra colección de productos únicos impresos en 3D con la más alta calidad
+                        </p>
+                    </div>
+
+                    <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                         {productos.map(producto => (
-                            <div key={producto.id} className="bg-white rounded-lg shadow p-4">
-                                <img
-                                    src={producto.imageSrc}
-                                    alt={producto.imageAlt}
-                                    className="w-full h-48 object-cover rounded"
-                                />
-                                <h2 className="mt-2 text-lg font-semibold">{producto.name}</h2>
-                                <p className="text-gray-500">{producto.color}</p>
-                                <p className="text-gray-700 font-bold">{producto.price}</p>
-                                <p className="text-sm text-gray-400">{producto.size}</p>
-                            </div>
+                            <a
+                                key={producto.id}
+                                href={producto.href}
+                                className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                            >
+                                <div className="aspect-square overflow-hidden">
+                                    <img
+                                        src={producto.imageSrc}
+                                        alt={producto.imageAlt}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                </div>
+                                <div className="p-4">
+                                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                                        {producto.name}
+                                    </h3>
+                                    <p className="text-sm text-gray-500 mt-1">{producto.categoria}</p>
+                                    <p className="text-sm text-gray-600 mt-1">Colores: {producto.color}</p>
+                                    <p className="text-lg font-bold text-indigo-600 mt-2">{producto.price}</p>
+                                    <p className="text-xs text-gray-400 mt-1">Tamaño: {producto.size}</p>
+                                </div>
+                            </a>
                         ))}
                     </div>
-                </div>
+                </section>
 
 
 
@@ -532,16 +552,18 @@ export default function Storefront() {
                                 </h2>
                                 <p className="mt-3 text-xl text-white">
                                     Puedes consultarnos para crear productos que se adapten a tus necesidades y preferencias.
-                                    <li> Diseños exclusivos </li>
-                                    <li> Llaveros personalizados </li>
-                                    <li> Accesorios a medida </li>
-                                    <li> Regalos unicos </li>
                                 </p>
+                                <ul className="mt-4 text-lg text-white space-y-2">
+                                    <li>• Diseños exclusivos y únicos</li>
+                                    <li>• Llaveros personalizados</li>
+                                    <li>• Accesorios a medida</li>
+                                    <li>• Regalos únicos y memorables</li>
+                                </ul>
                                 <a
-                                    href="#"
-                                    className="mt-8 block w-full rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto"
+                                    href="/contacto"
+                                    className="mt-8 block w-full rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto transition-colors"
                                 >
-                                    Shop Focus
+                                    Solicitar Cotización
                                 </a>
                             </div>
                         </div>
