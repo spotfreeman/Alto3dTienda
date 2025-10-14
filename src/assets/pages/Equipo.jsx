@@ -28,69 +28,106 @@ export default function Equipo() {
                         Nuestro Equipo
                     </h1>
                     <p className="mt-6 text-lg leading-8 text-gray-600">
-                        Conoce a las personas detrás de Alto3D Tienda. Un equipo apasionado por la innovación
-                        y la creación de productos únicos impresos en 3D.
+                        Conoce al creador detrás de Alto3D Tienda. Un emprendedor multidisciplinario que combina
+                        fabricación digital, diseño 3D y desarrollo tecnológico para crear productos únicos.
                     </p>
                 </div>
 
                 {/* Historia de la empresa */}
                 <div className="mt-16">
-                    <div className="bg-gray-50 rounded-lg p-8">
+                    <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-8">
                         <h2 className="text-2xl font-bold text-gray-900 mb-4">Nuestra Historia</h2>
                         <p className="text-gray-600 leading-relaxed">
-                            Alto3D Tienda nació de la pasión por la tecnología de impresión 3D y el deseo de crear
-                            productos únicos y funcionales. Comenzamos como un pequeño proyecto personal y hemos
-                            crecido hasta convertirnos en una referencia en productos 3D personalizados en Chile.
+                            Alto3D Tienda es un emprendimiento que combina tecnología, diseño y fabricación digital.
+                            Nació de la pasión por crear productos únicos utilizando las últimas tecnologías de
+                            manufactura digital: <strong>impresión 3D, corte láser CNC y diseño digital</strong>.
                         </p>
                         <p className="text-gray-600 leading-relaxed mt-4">
-                            Nuestro enfoque se centra en la calidad, la innovación y la satisfacción del cliente.
-                            Cada producto que creamos pasa por un riguroso proceso de diseño, impresión y acabado
-                            para garantizar la máxima calidad.
+                            Como desarrollador fullstack y maker, integro conocimientos de programación, diseño 3D
+                            y fabricación digital para ofrecer soluciones completas: desde la idea hasta el producto
+                            físico en tus manos. Cada pieza es diseñada y fabricada con atención al detalle y
+                            compromiso con la calidad.
+                        </p>
+                        <p className="text-gray-600 leading-relaxed mt-4">
+                            <strong>¿Por qué Alto3D?</strong> Porque creemos que la tecnología debe estar al servicio
+                            de la creatividad, y que cada persona merece productos únicos que cuenten su historia.
                         </p>
                     </div>
                 </div>
 
-                {/* Equipo */}
+                {/* Fundador y Roles */}
                 <div className="mt-16">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-8">Conoce a Nuestro Equipo</h2>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">El Creador</h2>
 
-                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                        {/* Miembro 1 */}
-                        <div className="text-center">
-                            <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                <span className="text-4xl text-gray-600">👨‍💻</span>
+                    {/* Perfil principal destacado */}
+                    <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden mb-12">
+                        <div className="md:flex">
+                            <div className="md:flex-shrink-0 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center p-8">
+                                <div className="w-40 h-40 bg-white rounded-full flex items-center justify-center">
+                                    <span className="text-6xl">🚀</span>
+                                </div>
                             </div>
-                            <h3 className="text-lg font-semibold text-gray-900">Raúl Oyarzún</h3>
-                            <p className="text-indigo-600 font-medium">Fundador & Diseñador 3D</p>
-                            <p className="text-gray-600 mt-2 text-sm">
-                                Especialista en diseño 3D y tecnología de impresión.
-                                Con más de 5 años de experiencia en el campo.
+                            <div className="p-8">
+                                <div className="uppercase tracking-wide text-sm text-indigo-600 font-semibold">
+                                    Fundador & Multi-disciplinario
+                                </div>
+                                <h3 className="mt-2 text-2xl font-bold text-gray-900">Raúl Oyarzún Becerra</h3>
+                                <p className="mt-4 text-gray-600 leading-relaxed">
+                                    Desarrollador fullstack, maker y emprendedor tecnológico. Combino programación,
+                                    diseño 3D y fabricación digital para crear productos únicos desde cero.
+                                </p>
+                                <p className="mt-3 text-gray-600 leading-relaxed">
+                                    Del concepto digital al producto físico, manejo todo el proceso: desde el código
+                                    de esta web hasta la impresión 3D del producto que llega a tus manos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Mis Roles y Habilidades */}
+                    <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Mis Roles en Alto3D</h3>
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                        {/* Rol 1 */}
+                        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
+                            <div className="w-16 h-16 bg-indigo-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <span className="text-3xl">🖨️</span>
+                            </div>
+                            <h4 className="text-center font-semibold text-gray-900 mb-2">Fabricación 3D</h4>
+                            <p className="text-sm text-gray-600 text-center">
+                                Impresión 3D profesional con múltiples materiales y acabados de alta calidad
                             </p>
                         </div>
 
-                        {/* Miembro 2 */}
-                        <div className="text-center">
-                            <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                <span className="text-4xl text-gray-600">🎨</span>
+                        {/* Rol 2 */}
+                        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
+                            <div className="w-16 h-16 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <span className="text-3xl">⚡</span>
                             </div>
-                            <h3 className="text-lg font-semibold text-gray-900">Diseñadora</h3>
-                            <p className="text-indigo-600 font-medium">Especialista en Productos Sensoriales</p>
-                            <p className="text-gray-600 mt-2 text-sm">
-                                Encargada de desarrollar productos enfocados en bienestar
-                                y estimulación sensorial.
+                            <h4 className="text-center font-semibold text-gray-900 mb-2">Corte Láser CNC</h4>
+                            <p className="text-sm text-gray-600 text-center">
+                                Grabado y corte de precisión en diversos materiales con tecnología CNC láser
                             </p>
                         </div>
 
-                        {/* Miembro 3 */}
-                        <div className="text-center">
-                            <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                <span className="text-4xl text-gray-600">🔧</span>
+                        {/* Rol 3 */}
+                        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
+                            <div className="w-16 h-16 bg-pink-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <span className="text-3xl">🎨</span>
                             </div>
-                            <h3 className="text-lg font-semibold text-gray-900">Técnico</h3>
-                            <p className="text-indigo-600 font-medium">Especialista en Impresión</p>
-                            <p className="text-gray-600 mt-2 text-sm">
-                                Responsable del mantenimiento de equipos y optimización
-                                de procesos de impresión.
+                            <h4 className="text-center font-semibold text-gray-900 mb-2">Diseño 3D</h4>
+                            <p className="text-sm text-gray-600 text-center">
+                                Modelado 3D personalizado y adaptación de diseños según necesidades del cliente
+                            </p>
+                        </div>
+
+                        {/* Rol 4 */}
+                        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
+                            <div className="w-16 h-16 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <span className="text-3xl">💻</span>
+                            </div>
+                            <h4 className="text-center font-semibold text-gray-900 mb-2">Desarrollo Web</h4>
+                            <p className="text-sm text-gray-600 text-center">
+                                Desarrollo fullstack para crear experiencias digitales completas e integradas
                             </p>
                         </div>
                     </div>
@@ -143,32 +180,108 @@ export default function Equipo() {
                     </div>
                 </div>
 
-                {/* Tecnología */}
+                {/* Stack Tecnológico */}
                 <div className="mt-16">
-                    <div className="bg-gray-50 rounded-lg p-8">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">Nuestra Tecnología</h2>
+                    <div className="bg-gradient-to-br from-gray-50 to-indigo-50 rounded-lg p-8">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Stack Tecnológico</h2>
+                        <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
+                            Herramientas y tecnologías que uso para crear productos físicos y digitales de alta calidad
+                        </p>
+
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                            <div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Impresoras 3D</h3>
-                                <p className="text-gray-600 text-sm">
-                                    Utilizamos impresoras de última generación para garantizar
-                                    precisión y calidad en cada impresión.
-                                </p>
+                            {/* Hardware - Impresión 3D */}
+                            <div className="bg-white rounded-lg p-6 shadow-md">
+                                <div className="flex items-center mb-3">
+                                    <span className="text-2xl mr-3">🖨️</span>
+                                    <h3 className="text-lg font-semibold text-gray-900">Impresión 3D</h3>
+                                </div>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                    <li>• Impresoras FDM profesionales</li>
+                                    <li>• Múltiples materiales (PLA, PETG, TPU)</li>
+                                    <li>• Acabados de alta calidad</li>
+                                </ul>
                             </div>
-                            <div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Software de Diseño</h3>
-                                <p className="text-gray-600 text-sm">
-                                    Empleamos software profesional de modelado 3D para crear
-                                    diseños únicos y personalizados.
-                                </p>
+
+                            {/* Hardware - CNC Láser */}
+                            <div className="bg-white rounded-lg p-6 shadow-md">
+                                <div className="flex items-center mb-3">
+                                    <span className="text-2xl mr-3">⚡</span>
+                                    <h3 className="text-lg font-semibold text-gray-900">CNC Láser</h3>
+                                </div>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                    <li>• Corte y grabado de precisión</li>
+                                    <li>• Madera, acrílico, cartón</li>
+                                    <li>• Diseños personalizados</li>
+                                </ul>
                             </div>
-                            <div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Materiales Premium</h3>
-                                <p className="text-gray-600 text-sm">
-                                    Trabajamos exclusivamente con materiales de alta calidad
-                                    y biodegradables.
-                                </p>
+
+                            {/* Software - Diseño 3D */}
+                            <div className="bg-white rounded-lg p-6 shadow-md">
+                                <div className="flex items-center mb-3">
+                                    <span className="text-2xl mr-3">🎨</span>
+                                    <h3 className="text-lg font-semibold text-gray-900">Diseño 3D</h3>
+                                </div>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                    <li>• Modelado CAD profesional</li>
+                                    <li>• Software de slicing avanzado</li>
+                                    <li>• Optimización para impresión</li>
+                                </ul>
                             </div>
+
+                            {/* Software - Desarrollo Web */}
+                            <div className="bg-white rounded-lg p-6 shadow-md">
+                                <div className="flex items-center mb-3">
+                                    <span className="text-2xl mr-3">💻</span>
+                                    <h3 className="text-lg font-semibold text-gray-900">Desarrollo Web</h3>
+                                </div>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                    <li>• React, Vite, TailwindCSS</li>
+                                    <li>• Node.js, bases de datos</li>
+                                    <li>• Desarrollo fullstack completo</li>
+                                </ul>
+                            </div>
+
+                            {/* Software - Unity */}
+                            <div className="bg-white rounded-lg p-6 shadow-md">
+                                <div className="flex items-center mb-3">
+                                    <span className="text-2xl mr-3">🎮</span>
+                                    <h3 className="text-lg font-semibold text-gray-900">Unity 3D</h3>
+                                </div>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                    <li>• Visualización 3D interactiva</li>
+                                    <li>• Simulaciones de productos</li>
+                                    <li>• Experiencias inmersivas</li>
+                                </ul>
+                            </div>
+
+                            {/* Materiales */}
+                            <div className="bg-white rounded-lg p-6 shadow-md">
+                                <div className="flex items-center mb-3">
+                                    <span className="text-2xl mr-3">🌱</span>
+                                    <h3 className="text-lg font-semibold text-gray-900">Materiales</h3>
+                                </div>
+                                <ul className="text-sm text-gray-600 space-y-1">
+                                    <li>• PLA biodegradable premium</li>
+                                    <li>• Maderas y acrílicos</li>
+                                    <li>• Filamentos especiales</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Call to Action */}
+                        <div className="mt-8 text-center bg-indigo-600 rounded-lg p-6">
+                            <h3 className="text-white text-xl font-bold mb-2">
+                                ¿Tienes un proyecto en mente?
+                            </h3>
+                            <p className="text-indigo-100 mb-4">
+                                Ya sea un producto físico 3D, una experiencia web o una combinación de ambos
+                            </p>
+                            <Link
+                                to="/contacto"
+                                className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
+                            >
+                                Conversemos sobre tu proyecto
+                            </Link>
                         </div>
                     </div>
                 </div>
