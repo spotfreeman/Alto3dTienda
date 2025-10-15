@@ -22,6 +22,7 @@ import {
 } from '@heroicons/react/24/outline'
 
 
+import { Link } from 'react-router-dom'
 import imageGeneral from '../images/general.jpg'
 import { productos } from '../../data/products'
 
@@ -213,9 +214,9 @@ export default function Storefront() {
                         <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                             {navigation.pages.map((page) => (
                                 <div key={page.name} className="flow-root">
-                                    <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
+                                    <Link to={page.href} className="-m-2 block p-2 font-medium text-gray-900">
                                         {page.name}
-                                    </a>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
@@ -305,13 +306,13 @@ export default function Storefront() {
                                                         </Popover>
                                                     ))}
                                                     {navigation.pages.map((page) => (
-                                                        <a
+                                                        <Link
                                                             key={page.name}
-                                                            href={page.href}
+                                                            to={page.href}
                                                             className="flex items-center text-sm font-medium text-white"
                                                         >
                                                             {page.name}
-                                                        </a>
+                                                        </Link>
                                                     ))}
                                                 </div>
                                             </PopoverGroup>
@@ -407,20 +408,20 @@ export default function Storefront() {
                             <div className="relative box-content h-80 overflow-x-auto py-2 xl:overflow-visible">
                                 <div className="absolute flex space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
                                     {categories.map((category) => (
-                                        <a
+                                        <Link
                                             key={category.name}
-                                            href={category.href}
+                                            to={category.href}
                                             className="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
                                         >
                                             <span aria-hidden="true" className="absolute inset-0">
-                                                <img alt="" src={category.imageSrc} className="size-full object-cover" />
+                                                <img alt="" src={category.imageSrc} loading="lazy" className="size-full object-cover" />
                                             </span>
                                             <span
                                                 aria-hidden="true"
                                                 className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
                                             />
                                             <span className="relative mt-auto text-center text-xl font-bold text-white">{category.name}</span>
-                                        </a>
+                                        </Link>
                                     ))}
                                 </div>
                             </div>
@@ -428,10 +429,10 @@ export default function Storefront() {
                     </div>
 
                     <div className="mt-6 px-4 sm:hidden">
-                        <a href="/categoria/todos" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+                        <Link to="/categoria/todos" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
                             Ver todas las categorías
                             <span aria-hidden="true"> &rarr;</span>
-                        </a>
+                        </Link>
                     </div>
                 </section>
 
@@ -479,15 +480,16 @@ export default function Storefront() {
 
                     <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
                         {collections.map((collection) => (
-                            <a key={collection.name} href={collection.href} className="group block">
+                            <Link key={collection.name} to={collection.href} className="group block">
                                 <img
                                     alt={collection.imageAlt}
                                     src={collection.imageSrc}
+                                    loading="lazy"
                                     className="aspect-[3/2] w-full rounded-lg object-cover group-hover:opacity-75 lg:aspect-[5/6]"
                                 />
                                 <h3 className="mt-4 text-base font-semibold text-gray-900">{collection.name}</h3>
                                 <p className="mt-2 text-sm text-gray-500">{collection.description}</p>
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </section>
@@ -507,15 +509,16 @@ export default function Storefront() {
 
                     <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                         {productos.map(producto => (
-                            <a
+                            <Link
                                 key={producto.id}
-                                href={producto.href}
+                                to={producto.href}
                                 className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                             >
                                 <div className="aspect-square overflow-hidden">
                                     <img
                                         src={producto.imageSrc}
                                         alt={producto.imageAlt}
+                                        loading="lazy"
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                     />
                                 </div>
@@ -528,7 +531,7 @@ export default function Storefront() {
                                     <p className="text-lg font-bold text-indigo-600 mt-2">{producto.price}</p>
                                     <p className="text-xs text-gray-400 mt-1">Tamaño: {producto.size}</p>
                                 </div>
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </section>
@@ -559,12 +562,12 @@ export default function Storefront() {
                                     <li>• Accesorios a medida</li>
                                     <li>• Regalos únicos y memorables</li>
                                 </ul>
-                                <a
-                                    href="/contacto"
+                                <Link
+                                    to="/contacto"
                                     className="mt-8 block w-full rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto transition-colors"
                                 >
                                     Solicitar Cotización
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

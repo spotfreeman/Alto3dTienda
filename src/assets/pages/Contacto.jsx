@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom'
 import { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
+// Configuración de EmailJS por variables de entorno (Vite expone las que inician con VITE_)
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
 export default function Contacto() {
     const formRef = useRef()
     const [loading, setLoading] = useState(false)
@@ -13,13 +18,20 @@ export default function Contacto() {
         setStatus({ type: '', message: '' })
 
         try {
-            // Configuración de EmailJS
-            // IMPORTANTE: Reemplaza estos valores con los tuyos de EmailJS
+            // Validación de configuración
+            if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+                setStatus({
+                    type: 'error',
+                    message: 'Configuración de EmailJS faltante. Define VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID y VITE_EMAILJS_PUBLIC_KEY.',
+                })
+                return
+            }
+
             const result = await emailjs.sendForm(
-                'YOUR_SERVICE_ID',      // Reemplazar con tu Service ID
-                'YOUR_TEMPLATE_ID',     // Reemplazar con tu Template ID
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
                 formRef.current,
-                'YOUR_PUBLIC_KEY'       // Reemplazar con tu Public Key
+                EMAILJS_PUBLIC_KEY
             )
 
             if (result.text === 'OK') {
@@ -151,10 +163,11 @@ export default function Contacto() {
                                 <label htmlFor="nombre" className="block text-sm font-medium text-gray-700">
                                     Nombre Completo
                                 </label>
-                                <input
+                            <input
                                     type="text"
                                     id="nombre"
                                     name="nombre"
+                                required
                                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                     placeholder="Tu nombre completo"
                                 />
@@ -164,10 +177,11 @@ export default function Contacto() {
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                                     Email
                                 </label>
-                                <input
+                            <input
                                     type="email"
                                     id="email"
                                     name="email"
+                                required
                                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                     placeholder="tu@email.com"
                                 />
@@ -190,9 +204,10 @@ export default function Contacto() {
                                 <label htmlFor="asunto" className="block text-sm font-medium text-gray-700">
                                     Asunto
                                 </label>
-                                <select
+                            <select
                                     id="asunto"
                                     name="asunto"
+                                required
                                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                 >
                                     <option>Consulta sobre producto</option>
@@ -211,6 +226,7 @@ export default function Contacto() {
                                     id="mensaje"
                                     name="mensaje"
                                     rows={4}
+                                    required
                                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                     placeholder="Cuéntanos en qué podemos ayudarte..."
                                 />
