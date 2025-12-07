@@ -8,9 +8,6 @@ const CategoryPage = lazy(() => import('./assets/pages/CategoryPage.jsx'))
 const Contacto = lazy(() => import('./assets/pages/Contacto.jsx'))
 const Equipo = lazy(() => import('./assets/pages/Equipo.jsx'))
 
-import WhatsAppButton from './components/WhatsAppButton.jsx'
-
-// Importa los datos de productos
 import { productos } from './data/products'
 
 // Componente de carga simple
@@ -23,9 +20,6 @@ const LoadingFallback = () => (
 export default function App() {
   return (
     <Router>
-      {/* Botón flotante de WhatsApp visible en todas las páginas */}
-      <WhatsAppButton />
-
       <Suspense fallback={<LoadingFallback />}>
         <Routes>
           {/* Landing page principal - Storefront como página de inicio */}
