@@ -1,0 +1,7 @@
+services:
+  app:
+    container_name: TiendaAlto3d
+    build: .
+    ports:
+      - "8081:80"
+    restart: always
